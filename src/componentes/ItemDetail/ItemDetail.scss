@@ -1,0 +1,33 @@
+.detailContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    .detailimg {
+        height: 300px;
+        width: 300px;
+        
+        img {
+            width: 300px;
+            height: 300px;
+            
+        }
+    }
+    .detailbody{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: .4rem;
+        button{
+            padding: 10px;
+            margin: 10px;
+            font-size: 20px;
+            border:none;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
