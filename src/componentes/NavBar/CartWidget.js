@@ -1,8 +1,8 @@
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 function CartWidget () {
 
     return(
-        <button><ShoppingCartIcon/></button>
+        <button><ShoppingCartOutlinedIcon/></button>
 
     )
 }

@@ -1,8 +1,15 @@
 import products from '../../utils/products.mock';
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList';
+import {useParams} from "react-router-dom"
 
 function ItemListContainer({ seccion }) {
+
+    const{category}=useParams()
+    console.log(category);
+    
+
+
 
     const [listProducts, setListProduct] = useState([])
 
@@ -16,7 +23,7 @@ function ItemListContainer({ seccion }) {
         getProducts
             .then((res) => {
                 setListProduct(res);
-                
+
             })
     }, [])
 
@@ -24,11 +31,11 @@ function ItemListContainer({ seccion }) {
 
     return (
         <div>
-            <div>
-                <h1>{seccion}</h1>
-            </div>
-             <ItemList dataProducts={listProducts} />
 
+            <h1>{seccion}</h1>
+            <div>
+                <ItemList dataProducts={listProducts} />
+            </div>
         </div>
     )
 }
