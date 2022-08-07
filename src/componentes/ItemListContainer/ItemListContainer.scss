@@ -1,8 +1,8 @@
 .ItemListContainer{
     float: left;
     display:flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+
     gap: 25px;
     border: 1px solid #000;
 }
