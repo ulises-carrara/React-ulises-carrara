@@ -12,10 +12,7 @@ function Item({ data }) {
                 <img src={img} alt="producto" />
                 <p>{title}</p>
                 <span>$ {price}</span>
-                <div className="contador">
                     <ItemCounter />
-                </div>
-                
                 </Link>
             </div>
         

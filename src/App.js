@@ -5,6 +5,7 @@ import{BrowserRouter, Routes, Route} from "react-router-dom"
 import Contacto from './pages/Contact';
 import Home from './pages/Home';
 import Productos from './pages/Products';
+import Checkout from './pages/Checkout';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/Productos' element={<Productos/>}/>
         <Route path='/Contacto' element={<Contacto/>}/>
         <Route path='*' element={<h1>Error 404</h1>}/>
+        <Route path='/Cart' element={<Checkout/>}/>
       </Routes>
      
    

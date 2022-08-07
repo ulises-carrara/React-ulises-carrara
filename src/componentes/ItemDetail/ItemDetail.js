@@ -1,8 +1,13 @@
 import './ItemDetail.scss'
-
+import ItemCounter from '../Item/ItemCounter'
+import {useState} from 'react'
+import {Link} from 'react-router-dom'
 
 function ItemDetail({ data }) {
     const { img, title, price } = data
+
+ const [cantidad, setCantidad]=useState(0)
+
     return (
         <div className="detailContainer">
 
@@ -19,8 +24,12 @@ function ItemDetail({ data }) {
                     <button>L</button>
                     <button>XL</button>
                 </div>
+                {console.log(cantidad)}
 
-                <button>Añadir al carrito</button>
+                {cantidad > 0 ?  <button><Link to={'/Cart'}>Finalizar compra</Link></button> : <ItemCounter setCantidad={setCantidad}/>}
+
+                    
+                    
                 </fieldset>
             </div>
         </div>

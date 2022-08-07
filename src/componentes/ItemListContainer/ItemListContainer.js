@@ -1,13 +1,14 @@
 import products from '../../utils/products.mock';
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList';
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom"
+import "./ItemListContainer.scss"
 
 function ItemListContainer({ seccion }) {
 
-    const{category}=useParams()
+    const { category } = useParams()
     console.log(category);
-    
+
 
 
 
@@ -30,11 +31,10 @@ function ItemListContainer({ seccion }) {
 
 
     return (
-        <div>
-
-            <h1>{seccion}</h1>
-            <div>
-                <ItemList dataProducts={listProducts} />
+    <div>
+         <h1>{seccion}</h1>
+         <div className='ItemListContainer'> 
+            <ItemList dataProducts={listProducts} />
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import './Item.scss'
 
-function ItemCounter(){
+function ItemCounter({setCantidad}){
 
     const [contador, setcontador]=useState(1)
     const suma = () =>{
@@ -10,12 +11,17 @@ function ItemCounter(){
         setcontador(contador-1)
     }
 
+    const onAdd=()=>{
+        setCantidad(contador)
+    }
+
     return(
-        <>
+       <div className='contador'>
         <button onClick={suma}>+</button>
         <p>{contador}</p>
         <button onClick={resta}>-</button>
-        </>
+        <button onClick={onAdd}>Añadir al carrito</button>
+        </div>
     )
 }
 export default ItemCounter
