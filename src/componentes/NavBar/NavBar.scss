@@ -1,26 +1,76 @@
-.navBar{
-    background-color:gray;
+.navBar {
+    background-color: gray;
     display: flex;
-    justify-content: center;
-   
-    button{
+    
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    button {
         background-color: grey;
         margin: 20px;
-        border:none;
+        border: none;
         font-size: 20px;
         text-transform: uppercase;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             text-decoration: underline;
         }
     }
 }
-.NavIcon{
-    position: absolute;
+
+.NavIcon {
+   position: relative;
     left: 20px;
     border: 2px solid rgb(0, 0, 0);
-    button{
-        max-width: 100%;
+
+    button {
         
+        justify-content: center;
+    }
+}
+
+.item-cart-product {
+    /* float: left; */
+    display: flex;
+    max-width: 500px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.item-cart-product img {
+    width: 25%;
+}
+
+.item-cart-product img + .cart-product__details {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-cart-product .cart-product__details:nth-last-child(2) {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.cart-product__action {
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+.btn_delete_all{
+    margin: 20px;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
     }
 }

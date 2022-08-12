@@ -26,7 +26,7 @@ function ItemDetail({ data }) {
                 </div>
                 {console.log(cantidad)}
 
-                {cantidad > 0 ?  <button><Link to={'/Cart'}>Finalizar compra</Link></button> : <ItemCounter setCantidad={setCantidad}/>}
+                {cantidad > 0 ?  <button><Link to={'/Cart'}>Finalizar compra</Link></button> : <ItemCounter productData={data} setCantidad={setCantidad}/>}
 
                     
                     

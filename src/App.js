@@ -6,10 +6,11 @@ import Contacto from './pages/Contact';
 import Home from './pages/Home';
 import Productos from './pages/Products';
 import Checkout from './pages/Checkout';
-
+import CartProvider from './context/CartContext';
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
     <div className="App">
       <NavBar/>
@@ -27,6 +28,7 @@ function App() {
   
     </div>
     </BrowserRouter>
+    </CartProvider>
   );
 }
  /*<ItemDetailContainer/>*/

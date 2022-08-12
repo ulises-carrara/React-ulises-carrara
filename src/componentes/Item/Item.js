@@ -1,5 +1,4 @@
 import './Item.scss'
-import ItemCounter from './ItemCounter';
 import {Link} from 'react-router-dom'
 
 function Item({ data }) {
@@ -10,10 +9,10 @@ function Item({ data }) {
             <div className="card">
                 <Link to={`/Productos/${id}`}>
                 <img src={img} alt="producto" />
-                <p>{title}</p>
+                <h2>{title}</h2>
                 <span>$ {price}</span>
-                    <ItemCounter />
                 </Link>
+                
             </div>
         
     );

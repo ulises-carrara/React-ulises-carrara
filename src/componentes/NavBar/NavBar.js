@@ -11,14 +11,16 @@ const NavBar = () => {
             <div className='NavIcon'>
                 <Link to="/"><button><AutoModeIcon /></button></Link>
             </div>
-            <ul>
-                <Link to="/"><button>Inicio</button></Link>
-                <Link to="/Productos"><button>Productos</button></Link>
-                <Link to=""><button>Nostros</button></Link>
-                <Link to="/Contacto"><button>Contacto</button></Link>
-                <CartWidget />
-                <BasicExample/>
-            </ul>
+            <div>
+                <ul>
+                    <Link to="/"><button>Inicio</button></Link>
+                    <Link to="/Productos"><button>Productos</button></Link>
+                    <Link to=""><button>Nostros</button></Link>
+                    <Link to="/Contacto"><button>Contacto</button></Link>
+                    <CartWidget />
+                    <BasicExample />
+                </ul>
+            </div>
         </div>
     )
 

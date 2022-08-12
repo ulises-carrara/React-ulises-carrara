@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 import './Item.scss'
 
-function ItemCounter({setCantidad}){
+function ItemCounter({setCantidad, productData}){
+    const{addProductToCart, setCantidadCart}= useContext(CartContext)
 
     const [contador, setcontador]=useState(1)
     const suma = () =>{
@@ -13,6 +15,8 @@ function ItemCounter({setCantidad}){
 
     const onAdd=()=>{
         setCantidad(contador)
+        addProductToCart(productData)
+        setCantidadCart(contador)
     }
 
     return(
