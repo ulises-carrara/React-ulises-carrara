@@ -11,7 +11,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function BasicMenu() {
 
-  const { cartProduct, deleteProduct, deleteAll } = useContext(CartContext)
+  const { cartProduct, deleteProduct, deleteAll, totalProducts } = useContext(CartContext)
 
 
 
@@ -25,16 +25,19 @@ export default function BasicMenu() {
   };
 
   return (
-    <div>
-      <Button
+    <div className='cart-button'>
+
+      <p style={{display:cartProduct.length === 0 ? "none" : ""}}>{totalProducts}</p>
+
+     <ShoppingCartOutlinedIcon
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-      >
-        <ShoppingCartOutlinedIcon />
-      </Button>
+       />
+       
+     
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}

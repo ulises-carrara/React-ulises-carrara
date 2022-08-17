@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom'
 import AutoModeIcon from '@mui/icons-material/AutoMode';
 import BasicExample from './DropDown';
 
+
 const NavBar = () => {
+    
     return (
+
 
         <div className="navBar">
             <div className='NavIcon'>
@@ -17,8 +20,8 @@ const NavBar = () => {
                     <Link to="/Productos"><button>Productos</button></Link>
                     <Link to=""><button>Nostros</button></Link>
                     <Link to="/Contacto"><button>Contacto</button></Link>
-                    <CartWidget />
                     <BasicExample />
+                    <CartWidget />
                 </ul>
             </div>
         </div>

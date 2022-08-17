@@ -1,7 +1,11 @@
 .navBar {
     background-color: gray;
     display: flex;
-    
+    .cart-button{
+        display: flex;
+        align-items: center;
+
+    }
     ul{
         display: flex;
         flex-direction: row;
@@ -36,7 +40,7 @@
 .item-cart-product {
     /* float: left; */
     display: flex;
-    max-width: 500px;
+    max-width: 200px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
 }
@@ -74,3 +78,4 @@
         text-decoration: underline;
     }
 }
+

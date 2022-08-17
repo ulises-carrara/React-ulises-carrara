@@ -2,7 +2,7 @@ const products=[
     {
       id: 1, 
       title: "Campera", 
-      price: 11111,
+      price: 17000,
       img: "/imagenes/campera.jpg" ,
       category: "abrigo",
       stock: 0
@@ -11,7 +11,7 @@ const products=[
     {
         id: 2,
         title: "Remera",
-        price: 11111,
+        price: 3000,
         img:"/imagenes/remeraM.jpg",
         category: "remera",
         stock: 0
@@ -19,7 +19,7 @@ const products=[
     {
         id: 3,
         title: "Pantalon",
-        price: 11111,
+        price: 5000,
         img: "/imagenes/pantalones.jpg",
         category: "pantalon",
         stock: 0
@@ -27,7 +27,7 @@ const products=[
     {
         id: 4,
         title: "Buzo",
-        price: 11111,
+        price: 7500,
         img: "/imagenes/buzo.jpg",
         category: "abrigo",
         stock: 0
@@ -35,7 +35,7 @@ const products=[
     {
         id: 5,
         title: "Buzo femenino",
-        price: 11111,
+        price: 7500,
         img: "/imagenes/buzoM.jpg",
         category: "abrigo",
         stock: 0
@@ -43,7 +43,7 @@ const products=[
     {
         id: 6,
         title: "zapatillas",
-        price: 11111,
+        price: 15000,
         img: "/imagenes/zapatillas.jpg",
         category: "zapatillas",
         stock: 0
@@ -51,7 +51,7 @@ const products=[
     {
         id: 7,
         title: "Medias",
-        price: 11111,
+        price: 750,
         img: "/imagenes/medias.jpg",
         category: "accesorios",
         stock: 0
@@ -59,7 +59,7 @@ const products=[
     {
         id: 8,
         title: "Gorra",
-        price: 11111,
+        price: 1500,
         img: "/imagenes/gorra.jpg",
         category: "accesorios",
         stock: 0

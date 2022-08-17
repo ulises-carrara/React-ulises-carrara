@@ -6,12 +6,6 @@ import "./ItemListContainer.scss"
 
 function ItemListContainer({ seccion }) {
 
-    const { category } = useParams()
-    console.log(category);
-
-
-
-
     const [listProducts, setListProduct] = useState([])
 
     const getProducts = new Promise((resolve, reject) => {
