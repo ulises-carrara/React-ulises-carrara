@@ -1,31 +1,37 @@
 import "./ItemListContainer.scss"
-import products from "../../utils/products.mock"
 import { useEffect, useState } from 'react'
 import ItemDetail from "../ItemDetail/ItemDetail"
-import {useParams} from "react-router-dom"
-
+import { useParams } from "react-router-dom"
+import db from "../../FirebaseConfig"
+import { doc, getDoc } from "firebase/firestore"
 
 function ItemDetailContainer() {
-    const [productData, setProductData]=useState({})
-    const{id}=useParams()
+    const [productData, setProductData] = useState({})
+    const { id } = useParams()
 
-    useEffect(()=>{
-       filterById()
-    },[])
-
-const filterById=()=>{
-     products.some((product)=>{
-            if(product.id==id){
-                setProductData(product)
-            }
+    useEffect(() => {
+        getProduct()
+        .then((res)=>{
+            setProductData(res)
         })
-}
+    }, [id])
+
+
+
+    const getProduct = async ()=>{
+        const docRef = doc(db, "1", id)
+        const docSnapshot = await getDoc(docRef)
+        let product = docSnapshot.data()
+        product.id = docSnapshot.id
+        console.log("detail", product);
+        return product
+    }
 
 
     return (
         <>
- 
-         <ItemDetail data={productData}/>
+
+            <ItemDetail data={productData} />
 
         </>
 
