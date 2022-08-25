@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     gap: 25px;
     .btn_delete-all{
+        flex-direction: row;
         position: fixed;
         top: 150px;
         right: 250px; 

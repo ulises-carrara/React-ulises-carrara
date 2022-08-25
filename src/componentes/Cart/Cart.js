@@ -1,11 +1,14 @@
 import './Cart.scss'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import DeleteIcon from '@mui/icons-material/Delete';
+import Modal from '../Modal/Modal';
+import { sassFalse } from 'sass';
 
 function Cart() {
     const { cartProduct, deleteProduct, deleteAll, precioTotal } = useContext(CartContext)
-    console.log("productos desde cart", cartProduct);
+    const [showModal, setShowModal] = useState(false)
+
     return (
         <div className='cart-container'>
             {cartProduct.map((product) => {
@@ -28,8 +31,17 @@ function Cart() {
             })}
             <div className='btn_delete-all'>
                 <button onClick={() => deleteAll()} className={"btn_delete_all"}>Eliminar todo</button>
+                <buttom onClick={() => setShowModal(true)} className={"btn_delete_all"}>Pagar</buttom>
             </div>
             <p>Total a pagar $ {precioTotal}</p>
+
+            {showModal &&
+                <Modal title={"Datos de contacto"} >
+                    
+                    <h3>ey</h3>
+                </Modal>
+            }
+
         </div>
 
     )
